@@ -1,0 +1,77 @@
+<script type="text/javascript">
+	/***********
+	 Animates element's number to new number with commas
+		Parameters:
+		stop (number): number to stop on
+		commas (boolean): turn commas on/off (default is true)
+		duration (number): how long in ms (default is 1000)
+		ease (string): type of easing (default is "swing", others are avaiable from jQuery's easing plugin
+		Examples:
+		$("#div").animateNumbers(1234, false, 500, "linear"); // half second linear without commas
+		$("#div").animateNumbers(1234, true, 2000); // two second swing with commas
+		$("#div").animateNumbers(4321); // one second swing with commas
+		This fully expects an element containing an integer
+		If the number is within copy then separate it with a span and target the span
+		Will work in appropriate inputs
+		Inserts and accounts for commas during animation by default
+
+		https://github.com/talmand/jquery-animate-numbers
+		***********/
+
+	!function (e) { e.fn.animateNumbers = function (t, a, n, l) { return this.each(function () { var i = e(this), r = i.is("input"), v = parseInt(r ? i.val().replace(/,/g, "") : i.text().replace(/,/g, "")), u = /(\d)(?=(\d\d\d)+(?!\d))/g; a = void 0 === a ? !0 : a, r && "number" === i[0].type && (a = !1), e({ value: v }).animate({ value: t }, { duration: void 0 === n ? 1e3 : n, easing: void 0 === l ? "swing" : l, step: function () { r ? i.val(Math.floor(this.value)) : i.text(Math.floor(this.value)), a && (r ? i.val(i.val().replace(u, "$1,")) : i.text(i.text().replace(u, "$1,"))) }, complete: function () { (parseInt(i.text()) !== t || parseInt(i.val()) !== t) && (r ? i.val(t) : i.text(t), a && (r ? i.val(i.val().replace(u, "$1,")) : i.text(i.text().replace(u, "$1,")))) } }) }) } }(jQuery);
+
+	let users = Number(localStorage.getItem("users")) | 0
+	document.getElementById("global_users").innerText = users
+	$.getJSON("https://karma.adwhore.net:47976/statsMini", function (data) {
+		localStorage.setItem("users", data["global"]["users"])
+		$("#global_users").animateNumbers(data["global"]["users"]);
+	});
+
+
+	function secondsToYdhms(seconds) {
+		seconds = Number(seconds);
+		var y = Math.floor(seconds / (3600 * 24 * 365));
+		var d = Math.floor(seconds / (3600 * 24));
+		d = d - 365 * y
+		var h = Math.floor(seconds % (3600 * 24) / 3600);
+		var m = Math.floor(seconds % 3600 / 60);
+		var s = Math.floor(seconds % 60);
+
+		var yDisplay = y > 0 ? y + "y, " : "";
+		var dDisplay = d > 0 ? d + "d, " : "";
+		var hDisplay = h > 0 ? h + "h, " : "";
+		var mDisplay = m > 0 ? m + "m, " : "";
+		var sDisplay = s >= 0 ? (+ s < 10 ? "0" : "") + s + "s" : "";
+		return yDisplay + dDisplay + hDisplay + mDisplay + sDisplay;
+	}
+
+	function updServing() {
+		document.getElementById("serving").innerText = secondsToYdhms(Math.floor((+ new Date() - 1632816617000) / 1000))
+
+		setTimeout(updServing, 1000);
+	}
+	updServing();
+
+	let params = new URLSearchParams(window.location.search);
+	if (params.has('uninstall-ru') || params.has('uninstall-en')) {
+		(function (d, script) {
+			script = d.createElement('script');
+			script.type = 'text/javascript';
+			script.async = true;
+			script.onload = function () {
+				if (params.has('uninstall-ru')) {
+					Swal.fire({ width: 700, showConfirmButton: false, html: `<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4ClGgUUtmIFWKfPl5DgqJmsz4VfKdWADVLCm-Gd4J1gMXFw/viewform?embedded=true" width="640" height="741" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>` }).then(()=>{
+						window.history.pushState({}, document.title, "/ru");
+					})
+				} else if (params.has('uninstall-en')) {
+					Swal.fire({ width: 700, showConfirmButton: false, html: `<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScLxb6dA7vaLU9J_yPWZR-Km4S_0jmq8m6zsLctEo52WfI_tw/viewform?embedded=true" width="640" height="741" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>` }).then(()=>{
+						window.history.pushState({}, document.title, "/en");
+					})
+				}
+			};
+			script.src = 'https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8';
+			d.getElementsByTagName('head')[0].appendChild(script);
+		}(document));
+	}
+
+</script>

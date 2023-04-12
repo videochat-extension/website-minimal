@@ -1,0 +1,17 @@
+locales:
+  en:
+    languages:
+      - title: "RUS"
+        url: /ru
+        lang: ru
+      - title: "ENG"
+        url: /en
+        lang: en
+  ru:
+    languages:
+      - title: "ENG"
+        url: /en
+        lang: en
+      - title: "RUS"
+        url: /ru
+        lang: ru
