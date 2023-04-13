@@ -22,11 +22,11 @@
 
 	let users = Number(localStorage.getItem("users")) | 0
 	document.getElementById("global_users").innerText = users
-	$.getJSON("https://karma.adwhore.net:47976/statsMini", function (data) {
-		localStorage.setItem("users", data["global"]["users"])
-		$("#global_users").animateNumbers(data["global"]["users"]);
-	});
 
+	$.getJSON("https://api.videochat-extension.starbase.wiki:47977/users", function (data) {
+		localStorage.setItem("users", data["users"])
+		$("#global_users").animateNumbers(data["users"]);
+	});
 
 	function secondsToYdhms(seconds) {
 		seconds = Number(seconds);
