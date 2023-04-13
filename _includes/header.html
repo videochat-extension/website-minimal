@@ -1,34 +1,37 @@
 <header>
-        <center>
+    <center>
         <img src="/assets/img/en.png" alt="Logo" border="1" style="border-color:black" />
-        </center>
+    </center>
     <div style="text-align: center;">
-		<p style="margin-top: 5px">IP Locator & More for Omegle-like sites<br>
-		<small id="serving"><br></small>
-		</p>
-		<p><b>Weekly Users:</b> <span id="global_users">Loading..</span></p>
-     
+        <p style="margin-top: 5px">IP Locator & More for Omegle-like sites<br>
+            <small id="serving"><br></small>
+        </p>
+        <p><b>Weekly Users:</b> <span id="global_users">Loading..</span></p>
+
         <center>
-        <ul class="langswitch">
-        {% for link in site.data.navigation.locales[navlang].languages %}
-        {% assign ref_page=lang_ref_pages | where:"lang", link.lang | first %}
-        {% if ref_page %}
-        <li><a href="{{ site.url }}{{ ref_page.url }}"><strong>{{ link.title }}</strong></a></li>
-        {% else %}
-        <li><a href="{{ site.url }}{{ link.url }}"><strong>{{ link.title }}</strong></a></li>
-        {% endif %}
-        {% endfor %}
-        <li><a target="_blank" href="https://github.com/qrlk/videochat-extension"><strong>GIT</strong></a></li>
-        </ul>
+            <ul class="langswitch">
+                {% for link in site.data.navigation.locales[navlang].languages %}
+                {% assign ref_page=lang_ref_pages | where:"lang", link.lang | first %}
+                {% if ref_page %}
+                <li><a href="{{ site.url }}{{ ref_page.url }}"><strong>{{ link.title }}</strong></a></li>
+                {% else %}
+                <li><a href="{{ site.url }}{{ link.url }}"><strong>{{ link.title }}</strong></a></li>
+                {% endif %}
+                {% endfor %}
+                <li><a target="_blank" href="https://github.com/qrlk/videochat-extension"><strong>GIT</strong></a></li>
+            </ul>
         </center>
         {% if site.show_downloads %}
         <center>
             <ul class="downloads">
-                <li><a target="_blank" href="https://addons.mozilla.org/firefox/addon/videochat-extension-ip-locator/">Download
+                <li><a target="_blank"
+                        href="https://addons.mozilla.org/firefox/addon/videochat-extension-ip-locator/">Download
                         <strong>FIREFOX</strong></a></li>
-                <li><a target="_blank" href="https://chrome.google.com/webstore/detail/alchldmijhnnapijdmchpkdeikibjgoi">Download
+                <li><a target="_blank"
+                        href="https://chrome.google.com/webstore/detail/alchldmijhnnapijdmchpkdeikibjgoi">Download
                         <strong>CHROME</strong></a></li>
-                <li><a target="_blank" href="https://microsoftedge.microsoft.com/addons/detail/jdpiggacibaaecfbegkhakcmgaafjajn">Download
+                <li><a target="_blank"
+                        href="https://microsoftedge.microsoft.com/addons/detail/jdpiggacibaaecfbegkhakcmgaafjajn">Download
                         <strong>EDGE</strong></a></li>
             </ul>
         </center>
@@ -37,4 +40,3 @@
     <p><small>This project is maintained by <a target="_blank" href="http://qrlk.me">qrlk</a> <br>Contact me: <a
                 href="mailto: hi@qrlk.me">hi@qrlk.me</a></small></p>
 </header>
-
