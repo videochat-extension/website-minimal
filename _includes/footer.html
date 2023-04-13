@@ -60,11 +60,11 @@
 			script.async = true;
 			script.onload = function () {
 				if (params.has('uninstall-ru')) {
-					Swal.fire({ width: 700, showConfirmButton: false, html: `<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4ClGgUUtmIFWKfPl5DgqJmsz4VfKdWADVLCm-Gd4J1gMXFw/viewform?embedded=true" width="640" height="741" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>` }).then(() => {
+					Swal.fire({ width: 700, showConfirmButton: false, html: `<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4ClGgUUtmIFWKfPl5DgqJmsz4VfKdWADVLCm-Gd4J1gMXFw/viewform?embedded=true" width="640" height="741" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>` }).then(()=>{
 						window.history.pushState({}, document.title, "/ru");
 					})
 				} else if (params.has('uninstall-en')) {
-					Swal.fire({ width: 700, showConfirmButton: false, html: `<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScLxb6dA7vaLU9J_yPWZR-Km4S_0jmq8m6zsLctEo52WfI_tw/viewform?embedded=true" width="640" height="741" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>` }).then(() => {
+					Swal.fire({ width: 700, showConfirmButton: false, html: `<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScLxb6dA7vaLU9J_yPWZR-Km4S_0jmq8m6zsLctEo52WfI_tw/viewform?embedded=true" width="640" height="741" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>` }).then(()=>{
 						window.history.pushState({}, document.title, "/en");
 					})
 				}
