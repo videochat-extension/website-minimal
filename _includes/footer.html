@@ -24,7 +24,7 @@
 	document.getElementById("global_users").innerText = users
 
 	$.getJSON("https://api.videochat-extension.starbase.wiki:47977/users", function (data) {
-		localStorage.setItem("users", data["users"])
+		localStorage.setItem("users", data["users"]);
 		("#global_users").animateNumbers(data["users"], true, users === 0 ? 100: 3000);
 	});
 
