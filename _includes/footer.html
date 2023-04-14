@@ -25,7 +25,7 @@
 
 	$.getJSON("https://api.videochat-extension.starbase.wiki:47977/users", function (data) {
 		localStorage.setItem("users", data["users"])
-		$("#global_users").animateNumbers(data["users"]);
+		$("#global_users").animateNumbers(data["users"], true, 5000);
 	});
 
 	function secondsToYdhms(seconds) {
