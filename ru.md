@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Чат Рулетное Расширение | IP Геолокация и многое другое для Чат Рулетки (Chatruletka, ome.tv, Omegle, Chatrulez, Minichat, Coomeet Free)
+title: Чат Рулетное Расширение - IP Геолокация и многое другое для Чат Рулетки (Chatruletka, ome.tv, Omegle, Chatrulez, Minichat, Coomeet Free)
 description: Чат Рулетное Расширение — это независимое расширение для браузера, которое дополняет функционал Chatruletka, Omegle, Ome.tv, Minichat, Chatrulez & Coomeet Free.
 lang: ru
 ref: homepage
