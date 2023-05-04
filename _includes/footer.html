@@ -23,7 +23,7 @@
 	let users = Number(localStorage.getItem("users")) | 0
 	document.getElementById("global_users").innerText = users
 
-	$.getJSON("https://api.videochat-extension.starbase.wiki:47977/users", function (data) {
+	$.getJSON("https://ve-api.starbase.wiki/users", function (data) {
 		localStorage.setItem("users", data["users"]);
 		$("#global_users").animateNumbers(data["users"], true, users === 0 ? 100: 3000);
 	});
