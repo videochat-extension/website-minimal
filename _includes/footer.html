@@ -53,20 +53,29 @@
 	updServing();
 
 	let params = new URLSearchParams(window.location.search);
-	if (params.has('uninstall-ru') || params.has('uninstall-en')) {
+	if (params.has('uninstall-ru') || params.has('uninstall-en') || params.has('report-bug-en') || params.has('report-bug-ru')  || params.has('request-feature-en') || params.has('request-feature-ru')) {
 		(function (d, script) {
 			script = d.createElement('script');
 			script.type = 'text/javascript';
 			script.async = true;
 			script.onload = function () {
+				let openEmbedForm = function(url, width, eWidth, eHeight, next) {
+					Swal.fire({ width: width, showConfirmButton: false, html: `<iframe src="${url}" width="${eWidth}" height="${eHeight}" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>` }).then(()=>{
+						window.history.pushState({}, document.title, next);
+					})
+				}
 				if (params.has('uninstall-ru')) {
-					Swal.fire({ width: 700, showConfirmButton: false, html: `<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4ClGgUUtmIFWKfPl5DgqJmsz4VfKdWADVLCm-Gd4J1gMXFw/viewform?embedded=true" width="640" height="690" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>` }).then(()=>{
-						window.history.pushState({}, document.title, "/ru");
-					})
+					openEmbedForm("https://docs.google.com/forms/d/e/1FAIpQLSf4ClGgUUtmIFWKfPl5DgqJmsz4VfKdWADVLCm-Gd4J1gMXFw/viewform?embedded=true", 700, 640, 690, "/ru")
 				} else if (params.has('uninstall-en')) {
-					Swal.fire({ width: 700, showConfirmButton: false, html: `<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScLxb6dA7vaLU9J_yPWZR-Km4S_0jmq8m6zsLctEo52WfI_tw/viewform?embedded=true" width="640" height="690" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>` }).then(()=>{
-						window.history.pushState({}, document.title, "/en");
-					})
+					openEmbedForm("https://docs.google.com/forms/d/e/1FAIpQLScLxb6dA7vaLU9J_yPWZR-Km4S_0jmq8m6zsLctEo52WfI_tw/viewform?embedded=true", 700, 640, 690, "/en")
+				} else if (params.has('report-bug-ru')) {
+					openEmbedForm("https://docs.google.com/forms/d/e/1FAIpQLSeTx9R7AV7VrrUsk-pc3dS03LEQRJDInEM_iw8NKK6AG2TqOA/viewform?embedded=true", 700, 640, 690, "/ru")
+				} else if (params.has('report-bug-en')) {
+					openEmbedForm("https://docs.google.com/forms/d/e/1FAIpQLSdFdjLD83PmQu_VSL0zNS9QS1gNQY2aJYHCp-ayFoIgBfaSgQ/viewform?embedded=true", 700, 640, 690, "/en")
+				} else if (params.has('request-feature-ru')) {
+					openEmbedForm("https://docs.google.com/forms/d/e/1FAIpQLSeVZo9WiIZg9phiIPnSh8iT7gsjOJ__0KoNq8kB8CUi04NXlQ/viewform?embedded=true", 700, 640, 690, "/ru")
+				} else if (params.has('request-feature-en')) {
+					openEmbedForm("https://docs.google.com/forms/d/e/1FAIpQLSevwyOra9OCNYelmaMh-rZURAxU7qu6WwRAF0fXFP9nJE0g2A/viewform?embedded=true", 700, 640, 690, "/en")
 				}
 			};
 			script.src = 'https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8';
