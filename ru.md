@@ -11,8 +11,8 @@ ref: homepage
 * **Omegle (только геолокация IP и тёмная тема)**.
 * **Coomeet Free (только распознавание ботов)**.  
 
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
-<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%" src="https://www.youtube-nocookie.com/embed/KXDwuV9YUjY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div>
+<img src="/assets/img/example.png">
 </div>
 <br>
 **Вы сможете узнать, где находятся ваши собеседники, фильтровать их по полу, искать по конкретному городу, защитить ваш стрим от nsfw и многое другое!**
