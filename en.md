@@ -11,8 +11,8 @@ ref: homepage
 * **Omegle (IP Locator & Dark Mode only)**.
 * **Coomeet Free (bot recognition only)**.  
 
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
-<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%" src="https://www.youtube-nocookie.com/embed/KXDwuV9YUjY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div>
+<img src="/assets/img/example.png">
 </div>
 <br>
 **You will be able to find out where your interlocutors are from, filter them by gender, search for a specific city, protect your livestream from nsfw and much more!**
