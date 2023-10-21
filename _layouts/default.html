@@ -10,22 +10,22 @@
 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="shortcut icon" type="image/png" href='{{ site.url }}/assets/img/favicon.png'>
+  <link rel="shortcut icon" type="image/png" href='/assets/img/favicon.png'>
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if page.lang == "ru" %}
-  <meta property="og:image" content="{{ site.url }}/assets/img/{{ site.data['index']['header_logo_lang'] }}.png" />
+  <meta property="og:image" content="/assets/img/{{ site.data['index']['header_logo_lang'] }}.png" />
   {% else %}
-  <meta property="og:image" content="{{ site.url }}/assets/img/{{ site.data['index']['header_logo_lang'] }}.png" />
+  <meta property="og:image" content="/assets/img/{{ site.data['index']['header_logo_lang'] }}.png" />
   {% endif %}
   <link href="https://fonts.googleapis.com/css?family=Noto Sans" rel="stylesheet">
 
   {% seo %}
-  <link rel="stylesheet" href='{{site.url}}{{ "/assets/css/colors-ColorScheme.css?v=" | replace: "ColorScheme", ColorScheme |
+  <link rel="stylesheet" href='{{ "/assets/css/colors-ColorScheme.css?v=" | replace: "ColorScheme", ColorScheme |
     append: site.github.build_revision }}'>
-  <link rel="stylesheet" href='{{site.url}}{{ "/assets/css/style.css?v=" | append: site.github.build_revision }}'>
+  <link rel="stylesheet" href='{{ "/assets/css/style.css?v=" | append: site.github.build_revision }}'>
 </head>
 
 <body>
@@ -52,10 +52,10 @@
     //   userLang = userLang.substr(0, 2);
     //   sdfsdf
     //   if (userLang == "ru") {
-    //     window.location.href = "{{ site.url }}/ru/"
+    //     window.location.href = "/ru/"
     //   }
     //   else {
-    //     window.location.href = "{{ site.url }}/en/"
+    //     window.location.href = "/en/"
     //   }
     // });
   </script>

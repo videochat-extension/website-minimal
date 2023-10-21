@@ -5,7 +5,7 @@
 * **Coomeet Free (bot recognition only)**.  
 
 <div>
-<img src="{{site.url}}/assets/img/example.png">
+<img src="/assets/img/example.png">
 </div>
 <br>
 **With this extension installed, you can find out where your interlocutors are from, filter them by gender, search for a specific city, enable dark mode, and much more!**

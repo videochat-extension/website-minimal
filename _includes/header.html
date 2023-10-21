@@ -1,7 +1,7 @@
 <header>
     {% I18n_Headers %}
     <center>
-        <img src="{{ site.url }}/assets/img/{{ site.data['index']['header_logo_lang'] }}.png" alt="Logo" border="1" style="border-color:black" />
+        <img src="/assets/img/{{ site.data['index']['header_logo_lang'] }}.png" alt="Logo" border="1" style="border-color:black" />
     </center>
     <div style="text-align: center;">
         <p style="margin-top: 5px">{{ site.data['index']['header_title'] }}<br>
@@ -14,9 +14,9 @@
                 {% for link in site.data.navigation.locales[site.active_lang].languages %}
                 {% assign ref_page=lang_ref_pages | where:"lang", link.lang | first %}
                 {% if ref_page %}
-                <li><a href=' {{ site.url }}{{ ref_page.url }}'><strong>{{ link.title }}</strong></a></li>
+                <li><a href=' {{ ref_page.url }}'><strong>{{ link.title }}</strong></a></li>
                 {% else %}
-                <li><a href=' {{ site.url }}{{ link.url }}'><strong>{{ link.title }}</strong></a></li>
+                <li><a href=' {{ link.url }}'><strong>{{ link.title }}</strong></a></li>
                 {% endif %}
                 {% endfor %}
                 <li><a target="_blank"
