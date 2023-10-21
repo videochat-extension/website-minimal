@@ -5,12 +5,12 @@ locales:
         url: /ru
         lang: ru
       - title: "ENG"
-        url: /en
+        url: /
         lang: en
   ru:
     languages:
       - title: "ENG"
-        url: /en
+        url: /
         lang: en
       - title: "RUS"
         url: /ru

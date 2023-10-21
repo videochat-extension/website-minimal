@@ -1,4 +1,9 @@
 title: Videochat Extension
 description: IP Locator & More for Omegle, Ome.tv, Chatruletka, Minichat, Chatrulez, Coomeet Free
 show_downloads: true
-google_analytics:
+repository: qrlk/test-i18n
+languages: ["en", "ru"]
+default_lang: "en"
+exclude_from_localization: ["assets", "en.md"]
+sass:
+    sourcemap: never
