@@ -14,9 +14,9 @@
                 {% for link in site.data.navigation.locales[site.active_lang].languages %}
                 {% assign ref_page=lang_ref_pages | where:"lang", link.lang | first %}
                 {% if ref_page %}
-                <!-- <li><a href=' {{ ref_page.url }}'><strong>{{ link.title }}</strong></a></li> -->
+                <li><a href=' {{ ref_page.url }}'><strong>{{ link.title }}</strong></a></li>
                 {% else %}
-                <!-- <li><a href=' {{ link.url }}'><strong>{{ link.title }}</strong></a></li> -->
+                <li><a href=' {{ link.url }}'><strong>{{ link.title }}</strong></a></li>
                 {% endif %}
                 {% endfor %}
                 <li><a target="_blank"
