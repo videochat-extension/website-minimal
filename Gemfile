@@ -25,6 +25,6 @@ group :jekyll_plugins do
   gem 'jekyll-titles-from-headings'
   gem 'jekyll-relative-links'
   gem 'jekyll-seo-tag'
-  gem "jekyll-github-metadata"
+  # gem "jekyll-github-metadata"
   gem "jekyll-polyglot"
 end
