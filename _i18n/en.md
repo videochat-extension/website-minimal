@@ -48,7 +48,7 @@
 
 ### Simple Mode
 
-* a minimalistic mode that includes only essential features:
+* **a minimalistic mode that includes only essential features:**
   * ome.tv, chatruletka, minichat, chatrulez: displaying IP geolocation data in the chat area.
   * omegle: IP Locator & Dark Mode.
   * coomeet free: displaying the stranger's country, bot recognition and volume control.
