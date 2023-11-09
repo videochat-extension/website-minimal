@@ -1,7 +1,7 @@
 # Videochat Extension
 **Videochat Extension (Chatruletka Extension)** is an **[independent](https://github.com/qrlk/videochat-extension#policy-of-neutrality-acceptable-use-and-functional-limitations){:target="_blank"}** browser extension that expands the functionality in the following video chats:
 * **Chatruletka**, **Ome.tv**, **Minichat**, **Chatrulez**.
-* **Omegle (work-in-progress)**.
+* **Omegle (R.I.P.)**.
 * **Coomeet Free (bot recognition only)**.  
 
 <div>
