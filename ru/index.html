@@ -1,0 +1,483 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="shortcut icon" type="image/png" href='/assets/img/favicon.png'>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta property="og:image" content="/assets/img/ru.png" />
+  
+  <link href="https://fonts.googleapis.com/css?family=Noto Sans" rel="stylesheet">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Videochat Extension - IP Геолокация для Чат Рулетки | Videochat Extension</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Videochat Extension - IP Геолокация для Чат Рулетки" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Videochat Extension (Чат Рулетное Расширение) — это независимое расширение для браузера, которое дополняет функционал множества сайтов-видеочатов. Оно поддерживает Chatruletka, Omegle, Ome.tv, Minichat, Chatrulez &amp; Coomeet Free." />
+<meta property="og:description" content="Videochat Extension (Чат Рулетное Расширение) — это независимое расширение для браузера, которое дополняет функционал множества сайтов-видеочатов. Оно поддерживает Chatruletka, Omegle, Ome.tv, Minichat, Chatrulez &amp; Coomeet Free." />
+<meta property="og:site_name" content="Videochat Extension" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Videochat Extension - IP Геолокация для Чат Рулетки" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Videochat Extension (Чат Рулетное Расширение) — это независимое расширение для браузера, которое дополняет функционал множества сайтов-видеочатов. Оно поддерживает Chatruletka, Omegle, Ome.tv, Minichat, Chatrulez &amp; Coomeet Free.","headline":"Videochat Extension - IP Геолокация для Чат Рулетки","name":"Videochat Extension","url":"/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href='/assets/css/colors-auto.css?v='>
+  <link rel="stylesheet" href='/assets/css/style.css?v='>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header>
+    <meta http-equiv="Content-Language" content="ru">
+<link rel="alternate" hreflang="en" href="/ru/"/>
+<link rel="alternate" hreflang="ru" href="/ru//"/>
+
+    <center>
+        <img src="/assets/img/ru.png" alt="Logo" border="1" style="border-color:black" />
+    </center>
+    <div style="text-align: center;">
+        <p style="margin-top: 5px">IP Геолокация для Чат Рулетки<br>
+            <small id="serving"><br></small>
+        </p>
+        <p><b>Активных Юзеров:</b> <span id="global_users">Loading..</span></p>
+
+        <center>
+            <ul class="langswitch">
+                
+                
+                
+                <li><a href=' /'><strong>ENG</strong></a></li>
+                
+                
+                
+                
+                <li><a href=' /ru'><strong>RUS</strong></a></li>
+                
+                
+                <li><a target="_blank"
+                        href="https://github.com/videochat-extension/videochat-extension"><strong>GIT</strong></a></li>
+            </ul>
+        </center>
+        
+        <center>
+            <ul class="downloads">
+                <li><a target="_blank"
+                        href="https://patreon.com/videochat-extension">Подпишись
+                        <strong>PATREON</strong></a></li>
+                <li><a target="_blank"
+                        href="https://chrome.google.com/webstore/detail/alchldmijhnnapijdmchpkdeikibjgoi">Скачать
+                        <strong>CHROME</strong></a></li>
+                <li><a target="_blank"
+                        href="https://microsoftedge.microsoft.com/addons/detail/jdpiggacibaaecfbegkhakcmgaafjajn">Скачать
+                        <strong>EDGE</strong></a></li>
+            </ul>
+        </center>
+        
+    </div>
+    <p><small>This project is maintained by <a target="_blank" href="http://qrlk.me">qrlk</a> <br>Contact me: <a
+                href="mailto: qrluke@proton.me">qrluke@proton.me</a></small></p>
+</header>
+
+    <section>
+
+      <h1 id="чат-рулетное-расширение">Чат Рулетное Расширение</h1>
+<p><strong>Чат Рулетное Расширение (Videochat Extension)</strong> — это <strong><a href="https://github.com/qrlk/videochat-extension#policy-of-neutrality-acceptable-use-and-functional-limitations" target="_blank">независимое</a></strong> расширение для браузера, которое дополняет функционал следующих видеочатов:</p>
+<ul>
+  <li><strong>Chatruletka</strong>, <strong>Ome.tv</strong>, <strong>Minichat</strong>, <strong>Chatrulez</strong>.</li>
+  <li><strong>Omegle (work-in-progress)</strong>.</li>
+  <li><strong>Coomeet Free (только распознавание ботов)</strong>.</li>
+</ul>
+
+<div>
+<img src="/assets/img/example.png" />
+</div>
+<p><br />
+<strong>Установите это расширение, чтобы узнать, где находятся ваши собеседники, фильтровать их по полу, искать конкретные города, активировать тёмную тему и многое другое!</strong></p>
+
+<h3 id="скачать">Скачать:</h3>
+<ul>
+  <li><strong><a target="_blank" href="https://chrome.google.com/webstore/detail/alchldmijhnnapijdmchpkdeikibjgoi" style="margin-right: 3px; text-decoration: none !important;"><img src="https://img.shields.io/chrome-web-store/v/alchldmijhnnapijdmchpkdeikibjgoi?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8%2F9hAAAAAXNSR0IArs4c6QAAAiVJREFUOE%2Blk01oE0EYht%2FZ7KZ%2FxoMW2QjmV8FThKIWNMgKHpT2ouhRsZ5E9KB4FQOttF4K%2FlQUhaqgN0FEPVRk9yBEaax4aVHIod1lhbpEJAlx0%2Bx8srOJCSWe%2BjEwM9%2F7zTPvzDAMGwzWbX2xWIwVFhbGOrW9Q0Oz6XR6ZX19V8CKaRXzH%2FNPO4uH9w%2BfScRj6a4Ay7LOMsbivsgBEKccA8txMQuilQtqODzOl3cmk4%2BFA8u2dRBpRM1iIgRDClpTCLp%2FmpFKJA4HAMvSCUwTIvmpToCfa4HbCgMZyRbAtCwdAtCxW3P3ALoeIJwZqWTTgWn6DiAAfnhzbyAVPoDVKgDn8JR%2B8H1ZSEdHO4%2FWBtj2D51AGlWrcK9fA7OXwXrDYHJIALi7Bl6rA9vjkMcnwAb6QWBGIrYjuAOn9EtnIO3r1GWkXhUg9cqAIoNJDOAEanjgbgP0Zw1SJoOeBzPiCKq6rQUo6fOlT9rL9zdxZdyEIofQkz2AxSMnEdrqIePNgsrvoCgcikJw98zA3TRiRFW1CXAc%2Fbn5TJtz3uL4fRtafRfunbuF1UoDvgk1ouDG7lMIuXlxR9W%2B8yhHcm3AT8fRJxcntO%2FuEsJlD1fns7iw5TQGwhCAah0wTjxEpDIlADXpIH4PvmgDVh3nzu2l6Ytfap%2FBGHBs8wgmXx%2BCLIcBMHheHd%2FGnqCvPC2etCqNojL46G40ql7q%2Bhe6fbD%2F5TYM%2BAuwXwQg0310YwAAAABJRU5ErkJggg%3D%3D" alt="Chrome Web Store" /></a></strong></li>
+  <li><strong><a target="_blank" href="https://microsoftedge.microsoft.com/addons/detail/jdpiggacibaaecfbegkhakcmgaafjajn" style="margin-right: 3px; text-decoration: none !important;"><img src="https://img.shields.io/badge/dynamic/json?label=edge%20add-on%E2%A0%80%E2%A0%80%E2%A0%80%E2%A0%80&amp;prefix=v&amp;query=%24.version&amp;url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fjdpiggacibaaecfbegkhakcmgaafjajn&amp;logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC%2FxhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAPFBMVEXyTyF9ugDzTx%2FzTx%2F0Th98ugB9uQB9uQAApPAApPAApPL%2FuAD%2FuAD%2FuAAAo%2FDxUCF%2BuQAAo%2B7%2FuAD%2F%2F%2F8yj46bAAAAD3RSTlOVlZWYV1eYlZWYV1eYlZXvKX2YAAAAAWJLR0QTDLtclgAAAAd0SU1FB%2BcDEwIIDXd1IeAAAAABb3JOVAHPoneaAAAAMElEQVQY02PghwAGRgEIYKCPABMYMLOwsrGDAQMHGHBycfPwggGDIATw8QpBAH0EACgVDlfkCCbeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIzLTAzLTE5VDAyOjA4OjEyKzAwOjAw5NFsjgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMy0wMy0xOVQwMjowODoxMiswMDowMJWM1DIAAAAASUVORK5CYII%3D" style="" alt="Edge" /></a></strong></li>
+</ul>
+
+<hr />
+
+<h3 id="ключевые-особенности">Ключевые особенности</h3>
+
+<ul>
+  <li>✓ IP-локатор - определяет приблизительное местоположение незнакомца</li>
+  <li>✓ Карта мира</li>
+  <li>✓ Бан нежелательных стран</li>
+  <li>✓ Поиск заданных локаций</li>
+  <li>✓ Фильтр по полу</li>
+  <li>✓ Темная тема</li>
+  <li>✓ Автоматизация</li>
+  <li>✓ Черный список</li>
+  <li>✓ Статистика</li>
+  <li>✓ Горячие клавиши</li>
+  <li>✓ Режим стримера</li>
+  <li>✓ Простой режим - только основные функции</li>
+  <li>✓ Настраиваемость - кастомизируйте функции по своему усмотрению</li>
+  <li>✓ Открытый исходный код - свобода и прозрачность</li>
+  <li>✓ Инди-проект - разработка при поддержке сообщества</li>
+  <li>✓ Конфиденциальность и безопасность - мы не собираем и не продаем ваши данные</li>
+</ul>
+
+<hr />
+
+<h3 id="ссылки">Ссылки</h3>
+
+<ul>
+  <li><strong><a href="https://patreon.com/videochat_extension" target="_blank">Patreon</a></strong></li>
+  <li><strong><a href="https://discord.gg/7DYWu5RF7Y" target="_blank">Discord</a></strong></li>
+  <li><strong><a href="https://github.com/videochat-extension" target="_blank">GitHub</a></strong></li>
+  <li><strong><a href="https://videochat-extension.canny.io" target="_blank">Roadmap</a></strong></li>
+  <li><strong><a href="https://github.com/qrlk/videochat-extension#policy-of-neutrality-acceptable-use-and-functional-limitations" target="_blank">Политика нейтральности</a></strong></li>
+</ul>
+
+<hr />
+
+<h3 id="простой-режим">Простой режим</h3>
+
+<ul>
+  <li><strong>минималистичный режим, включающий только основные функции:</strong>
+    <ul>
+      <li>ome.tv, chatruletka, minichat, chatrulez: отображение города/региона в области чата.</li>
+      <li>omegle: геолокация IP и тёмная тема.</li>
+      <li>coomeet free: отображение страны собеседника, распознавание ботов и регулировка громкости.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="полный-список-функций">Полный список функций</h3>
+
+<ul>
+  <li><strong>геолокация (IP Локатор)</strong>
+    <ul>
+      <li>определяет IP адрес собеседника, используемый для WebRTC соединения.</li>
+      <li>использует сервис IP геолокации для получания информации об этом IP адресе.</li>
+      <li>определяет приблизительное местоположение собеседника (город/регион/страны), провайдер, и используется ли мобильный интернет.</li>
+      <li>интеграция с модулем ‘карта’: данные IP геолокации отображаются на карте мира.</li>
+      <li>интеграция с ‘режимом стримера’: данные IP геолокации могут быть отображены в источнике-тексте внутри OBS.</li>
+      <li>определяет использует ли собеседник proxy/tor/vpn соединения, чтобы скрыть свою локацию.</li>
+      <li>опция для авто-пропуска заданных стран/регионов/городов.</li>
+      <li>опция для поиска собеседника по списку стран/регионов/городов.</li>
+      <li>интеграция iknowwhatyoudownload, которая позволяет вам открыть список торрентов возможно загруженных собеседником.</li>
+      <li>возможность выбрать язык данных IP геолокации из списка: English, Deutsch (German), Español (Spanish), Português (Portuguese), Français (French), 日本語 (Japanese), 中国 (Chinese), Русский (Russian).</li>
+      <li>возможность выбрать какой сервис IP геолокации будет использован.</li>
+    </ul>
+  </li>
+  <li><strong>карта</strong>
+    <ul>
+      <li>данные IP геолокации отображается на карте мира, встроенной в интерфейс.</li>
+      <li>отображает приблизительную зону где может находиться ваш собеседники.</li>
+      <li>отображает popup у маркера с информацией о местоположении собеседника.</li>
+      <li>разные опции для настройки поведения карты.</li>
+    </ul>
+  </li>
+  <li><strong>faceapi (распознавание пола)</strong>
+    <ul>
+      <li>нейросетевое распознавание пола собеседника на стороне клиента.</li>
+      <li>возможность авто-пропускать собеседников, если их пол не соответствует вашим ожиданиям.</li>
+      <li>интеграция с модулем ‘чёрный список’: возможность автоматически блокировать собеседников, которые были пропущены faceapi.</li>
+      <li>интеграция с модулем ‘статистика’: считает статистику сколько женщин и мужчин вам встречается и сколько было авто-пропущено.</li>
+    </ul>
+  </li>
+  <li><strong>интерфейс</strong>
+    <ul>
+      <li>тёмная тема.</li>
+      <li>возможность скрыть свою камеру, чтобы сделать разговор более натуральным.</li>
+      <li>возможность скрыть логотип, баннер, заголовок и вотермарку (не на всех платформах).</li>
+      <li>возможность отменить отражение камеры (не на всех платформах).</li>
+      <li>возможность показывать собеседников с мобильных устройств полностью, с чёрными полосками (не на всех платформах).</li>
+    </ul>
+  </li>
+  <li><strong>автоматизация</strong>
+    <ul>
+      <li>опция для авто-прпоуска собеседников которые загружаются дольше 4х секунд</li>
+      <li>опция для автопропуска людей из страны X, когда вы ищете людей из страны Y, но чат их не нашел и подсунул вам неправильную страну (не на всех платформах)</li>
+      <li>опция для автозакрытия ‘вы здесь?’ (не на всех платформах)</li>
+    </ul>
+  </li>
+  <li><strong>чёрный список</strong>
+    <ul>
+      <li>вы можете добавить IP адрес собеседника в чёрный список, чтобы расширение могло пропустить его.</li>
+      <li>интеграция с модулем ‘горячие клавиши’: хоткей для добавления незнакомца в чёрный список и пропуска.</li>
+      <li>опция отключить добавление мобильных IP в чёрный список.</li>
+      <li>опция для воспроизвения звук когда расширение пропускат собеседника из чёрного списка.</li>
+      <li>возможность очистить чёрный список.</li>
+    </ul>
+  </li>
+  <li><strong>статистика</strong>
+    <ul>
+      <li>считает количество людей, с которыми все встретились.</li>
+      <li>считает сколько времени вы провели в разговорах.</li>
+      <li>считает разную статистику для других модулей, например: faceapi / чёрный список.</li>
+    </ul>
+  </li>
+  <li><strong>контрольная панель</strong>
+    <ul>
+      <li>испровизированная контрольная панель которая играет роль интерфейса расширения.</li>
+      <li>состоит из заголовка, блока с контентом и списка вкладок, которые выбирают что будет отображаться в блоке.</li>
+      <li>список вкладок: ‘IP’, ‘Карта’, ‘Баны’, ‘Стата’, ‘Настройки’, ‘Инфо’.</li>
+      <li>вкладка ‘Инфо’ содежит полезную информацию о расширении: полезные ссылки, титры, историю версий и так далее.</li>
+      <li>заголовок содержит название расширения/версию, а так же блок с кнопками для разных функций расширения.</li>
+      <li>используйте кнопки в заголовке, чтобы сделать скриншот камеры или открыть видео в режиме ‘картинка-в-картинке’.</li>
+      <li>предоставляет контрольные кнопки для других модулей, например для ‘режима стримера’.</li>
+    </ul>
+  </li>
+  <li><strong>горячие клавиши</strong>
+    <ul>
+      <li>локальные хоткеи: используйте стрелки клавиатуры, чтобы пропустить/пропустить+заблокировать/остановить/отправить жалобу.</li>
+      <li>глобальные хоткеи: браузерные горячие клавиши для пропустить/пропустить+заблокировать/остановить.</li>
+      <li>глобальные хоткеи: браузерные горячие клавиши для скриншотов.</li>
+      <li>глобальные хоткеи: браузерные горячие клавиши для переключения между текущей вкладкой и вкладкой чата.</li>
+      <li>предоставляет функционал горячих клавиш для других модулей, например для ‘режима стримера’.</li>
+    </ul>
+  </li>
+  <li><strong>настройки</strong>
+    <ul>
+      <li>этот модуль отвечает за вкладку ‘Настройки’ в интерфейсе.</li>
+      <li>все настройки сгруппированы по их модулю.</li>
+      <li>если вы наведете курсор на настройку, отобразится детальная информация о том что эта настройка делает.</li>
+    </ul>
+  </li>
+  <li><strong>режим стримера</strong>
+    <ul>
+      <li>набор специальных функций, которые помогают вести прямые трансляции на Ютуб и других сервисах.</li>
+      <li>интеграция с OBS - возможность отображать данные IP геолокации в текстовом источнике и контролировать видимость заглушки, которая закрывает видео пока вы ищете подходящего собеседника.</li>
+      <li>blur &amp; cover - позволяет вам закрыть изображение с камеры собеседника блюром/картинкой/гифкой и смотреть на него через режим ‘картинка-в-картинке’, чтобы решить подходит ли собеседник для ваших зрителей.</li>
+      <li>интеграция с модулем ‘горячие клавиши’: горячие клавиши для переключения мута/блюра/заглушки для переключения мута/блюра/заглушки</li>
+      <li>интеграция с модулем ‘контрольная панель’: кнопки в заголовке для переключения мута/блюра/заглушки</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Не все функции расширения доступны на всех платформах.</strong></p>
+
+<hr />
+
+<h3 id="поддерживаемые-видеочаты">Поддерживаемые видеочаты</h3>
+
+<ul>
+  <li><strong>Chatruletka, Чат Рулетка (полная поддержка):</strong>
+    <ul>
+      <li><strong><a href="https://chatruletka.com" target="_blank">chatruletka.com</a></strong></li>
+      <li><strong><a href="https://chatruletka.ua" target="_blank">chatruletka.ua</a></strong></li>
+      <li><strong><a href="https://ruletka.chat" target="_blank">ruletka.chat</a></strong></li>
+      <li><strong><a href="https://videochatar.com" target="_blank">videochatar.com</a></strong></li>
+      <li><strong><a href="https://videochatau.com" target="_blank">videochatau.com</a></strong></li>
+      <li><strong><a href="https://videochatbr.com" target="_blank">videochatbr.com</a></strong></li>
+      <li><strong><a href="https://brvideochat.com" target="_blank">brvideochat.com</a></strong></li>
+      <li><strong><a href="https://videochatca.com" target="_blank">videochatca.com</a></strong></li>
+      <li><strong><a href="https://videochatde.com" target="_blank">videochatde.com</a></strong></li>
+      <li><strong><a href="https://videochatfr.com" target="_blank">videochatfr.com</a></strong></li>
+      <li><strong><a href="https://frvideochat.com" target="_blank">frvideochat.com</a></strong></li>
+      <li><strong><a href="https://roulettefrancais.com" target="_blank">roulettefrancais.com</a></strong></li>
+      <li><strong><a href="https://videochatit.com" target="_blank">videochatit.com</a></strong></li>
+      <li><strong><a href="https://videochatjp.com" target="_blank">videochatjp.com</a></strong></li>
+      <li><strong><a href="https://videochatmx.com" target="_blank">videochatmx.com</a></strong></li>
+      <li><strong><a href="https://videochatnl.com" target="_blank">videochatnl.com</a></strong></li>
+      <li><strong><a href="https://videochatpl.com" target="_blank">videochatpl.com</a></strong></li>
+      <li><strong><a href="https://videochatpt.com" target="_blank">videochatpt.com</a></strong></li>
+      <li><strong><a href="https://videochatru.com" target="_blank">videochatru.com</a></strong></li>
+      <li><strong><a href="https://videochatuk.com" target="_blank">videochatuk.com</a></strong></li>
+      <li><strong><a href="https://videochatus.com" target="_blank">videochatus.com</a></strong></li>
+      <li><strong><a href="https://roulette-espanol.com" target="_blank">roulette-espanol.com</a></strong></li>
+      <li><strong><a href="https://ruletaespanol.com" target="_blank">ruletaespanol.com</a></strong></li>
+      <li><strong><a href="https://ruletkavideochat.com" target="_blank">ruletkavideochat.com</a></strong></li>
+      <li><strong><a href="https://turkishvideochat.com" target="_blank">turkishvideochat.com</a></strong></li>
+    </ul>
+  </li>
+  <li><strong>Ome.tv (полная поддержка):</strong>
+    <ul>
+      <li><strong><a href="https://ome.tv" target="_blank">ome.tv</a></strong></li>
+      <li><strong><a href="https://ome.chat" target="_blank">ome.chat</a></strong></li>
+      <li><strong><a href="https://camki.com" target="_blank">camki.com</a></strong></li>
+      <li><strong><a href="https://chatalternative.com" target="_blank">chatalternative.com</a></strong></li>
+      <li><strong><a href="https://chatrooms.chat" target="_blank">chatrooms.chat</a></strong></li>
+      <li><strong><a href="https://chatrooms.pro" target="_blank">chatrooms.pro</a></strong></li>
+      <li><strong><a href="https://chat-brasil.com" target="_blank">chat-brasil.com</a></strong></li>
+      <li><strong><a href="https://chat-de.com" target="_blank">chat-de.com</a></strong></li>
+      <li><strong><a href="https://chat-fr.com" target="_blank">chat-fr.com</a></strong></li>
+      <li><strong><a href="https://chat-nl.com" target="_blank">chat-nl.com</a></strong></li>
+      <li><strong><a href="https://chat-pl.com" target="_blank">chat-pl.com</a></strong></li>
+      <li><strong><a href="https://chat-pt.com" target="_blank">chat-pt.com</a></strong></li>
+      <li><strong><a href="https://chatgenerator.com" target="_blank">chatgenerator.com</a></strong></li>
+      <li><strong><a href="https://prostochat.com" target="_blank">prostochat.com</a></strong></li>
+      <li><strong><a href="https://stickam.chat" target="_blank">stickam.chat</a></strong></li>
+      <li><strong><a href="https://chatbizar.com" target="_blank">chatbizar.com</a></strong></li>
+      <li><strong><a href="https://ukr.chat" target="_blank">ukr.chat</a></strong></li>
+      <li><strong><a href="https://cafeclub.ua" target="_blank">cafeclub.ua</a></strong></li>
+      <li><strong><a href="https://indiavideochat.com" target="_blank">indiavideochat.com</a></strong></li>
+      <li><strong><a href="https://webcamchatta.com" target="_blank">webcamchatta.com</a></strong></li>
+    </ul>
+  </li>
+  <li><strong>Minichat (полная поддержка):</strong>
+    <ul>
+      <li><strong><a href="https://minichat.com" target="_blank">minichat.com</a></strong></li>
+    </ul>
+  </li>
+  <li><strong>Chatrulez (полная поддержка):</strong>
+    <ul>
+      <li><strong><a href="https://chatrulez.ru" target="_blank">chatrulez.ru</a></strong></li>
+      <li><strong><a href="https://videochatruletka.com" target="_blank">videochatruletka.com</a></strong></li>
+      <li><strong><a href="https://videochatruletka.ru" target="_blank">videochatruletka.ru</a></strong></li>
+    </ul>
+  </li>
+  <li><strong>Omegle (только геолокация IP и тёмная тема):</strong>
+    <ul>
+      <li><strong><a href="https://www.omegle.com" target="_blank">omegle.com</a></strong></li>
+      <li><strong><a href="https://www.omegle.tv" target="_blank">omegle.tv</a></strong></li>
+    </ul>
+  </li>
+  <li><strong>Coomeet Free (только распознавание ботов):</strong>
+    <ul>
+      <li><strong><a href="https://free.coomeet.com" target="_blank">free.coomeet.com</a></strong></li>
+      <li><strong><a href="https://rusvideochat.ru" target="_blank">rusvideochat.ru</a></strong></li>
+      <li><strong><a href="https://video-roulette24.ru" target="_blank">video-roulette24.ru</a></strong></li>
+      <li><strong><a href="https://chatroulette.msk.ru" target="_blank">chatroulette.msk.ru</a></strong></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="конфиденциальность">Конфиденциальность</h3>
+
+<ul>
+  <li><strong>Ваша конфиденциальность и безопасность очень важны для нас</strong>
+    <ul>
+      <li>Мы не логируем ваши запросы геолокации.</li>
+      <li>Мы не разглашаем вашему собеседнику, что вы пользуетесь расширением.</li>
+    </ul>
+  </li>
+  <li><strong>Аналитика</strong>
+    <ul>
+      <li>Мы не анализируем ваши действия и поведение в видеочатах.</li>
+      <li>Для аналитики мы используем внутреннюю аналитику магазинов расширений, которая даёт нам всю необходимую информацию (количество установок, удалений и активных пользователей в разных странах).</li>
+    </ul>
+  </li>
+  <li><strong>Сбор ошибок</strong>
+    <ul>
+      <li>В расширении включен автоматический сбор анонимизированной информации об ошибках, эту функцию можно отключить в настройках или прямо в окне, которое показывается после установки.</li>
+    </ul>
+  </li>
+  <li><strong>Прозрачность</strong>
+    <ul>
+      <li>Исходный код проекта публично доступен на <strong><a href="https://github.com/videochat-extension" target="_blank">GitHub</a></strong>.</li>
+    </ul>
+  </li>
+</ul>
+
+
+    </section>
+
+    <script type="text/javascript">
+	/***********
+	 Animates element's number to new number with commas
+		Parameters:
+		stop (number): number to stop on
+		commas (boolean): turn commas on/off (default is true)
+		duration (number): how long in ms (default is 1000)
+		ease (string): type of easing (default is "swing", others are avaiable from jQuery's easing plugin
+		Examples:
+		$("#div").animateNumbers(1234, false, 500, "linear"); // half second linear without commas
+		$("#div").animateNumbers(1234, true, 2000); // two second swing with commas
+		$("#div").animateNumbers(4321); // one second swing with commas
+		This fully expects an element containing an integer
+		If the number is within copy then separate it with a span and target the span
+		Will work in appropriate inputs
+		Inserts and accounts for commas during animation by default
+
+		https://github.com/talmand/jquery-animate-numbers
+		***********/
+
+	!function (e) { e.fn.animateNumbers = function (t, a, n, l) { return this.each(function () { var i = e(this), r = i.is("input"), v = parseInt(r ? i.val().replace(/,/g, "") : i.text().replace(/,/g, "")), u = /(\d)(?=(\d\d\d)+(?!\d))/g; a = void 0 === a ? !0 : a, r && "number" === i[0].type && (a = !1), e({ value: v }).animate({ value: t }, { duration: void 0 === n ? 1e3 : n, easing: void 0 === l ? "swing" : l, step: function () { r ? i.val(Math.floor(this.value)) : i.text(Math.floor(this.value)), a && (r ? i.val(i.val().replace(u, "$1,")) : i.text(i.text().replace(u, "$1,"))) }, complete: function () { (parseInt(i.text()) !== t || parseInt(i.val()) !== t) && (r ? i.val(t) : i.text(t), a && (r ? i.val(i.val().replace(u, "$1,")) : i.text(i.text().replace(u, "$1,")))) } }) }) } }(jQuery);
+
+	let users = Number(localStorage.getItem("users")) | 0
+	document.getElementById("global_users").innerText = users
+
+	$.getJSON("https://ve-api.starbase.wiki/users", function (data) {
+		localStorage.setItem("users", data["users"]);
+		$("#global_users").animateNumbers(data["users"], true, users === 0 ? 100: 3000);
+	});
+
+	function secondsToYdhms(seconds) {
+		seconds = Number(seconds);
+		var y = Math.floor(seconds / (3600 * 24 * 365));
+		var d = Math.floor(seconds / (3600 * 24));
+		d = d - 365 * y
+		var h = Math.floor(seconds % (3600 * 24) / 3600);
+		var m = Math.floor(seconds % 3600 / 60);
+		var s = Math.floor(seconds % 60);
+
+		var yDisplay = y > 0 ? y + "y, " : "";
+		var dDisplay = d > 0 ? d + "d, " : "";
+		var hDisplay = h > 0 ? h + "h, " : "";
+		var mDisplay = m > 0 ? m + "m, " : "";
+		var sDisplay = s >= 0 ? (+ s < 10 ? "0" : "") + s + "s" : "";
+		return yDisplay + dDisplay + hDisplay + mDisplay + sDisplay;
+	}
+
+	function updServing() {
+		document.getElementById("serving").innerText = secondsToYdhms(Math.floor((+ new Date() - 1632816617000) / 1000))
+
+		setTimeout(updServing, 1000);
+	}
+	updServing();
+
+	let params = new URLSearchParams(window.location.search);
+	if (params.has('uninstall-ru') || params.has('uninstall-en') || params.has('report-bug-en') || params.has('report-bug-ru')  || params.has('request-feature-en') || params.has('request-feature-ru')) {
+		(function (d, script) {
+			script = d.createElement('script');
+			script.type = 'text/javascript';
+			script.async = true;
+			script.onload = function () {
+				let openEmbedForm = function(url, width, eWidth, eHeight, next) {
+					Swal.fire({ width: width, showConfirmButton: false, html: `<iframe src="${url}" width="${eWidth}" height="${eHeight}" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>` }).then(()=>{
+						window.history.pushState({}, document.title, next);
+					})
+				}
+				if (params.has('uninstall-ru')) {
+					openEmbedForm("https://docs.google.com/forms/d/e/1FAIpQLSf4ClGgUUtmIFWKfPl5DgqJmsz4VfKdWADVLCm-Gd4J1gMXFw/viewform?embedded=true", 700, 640, 650, "/ru")
+				} else if (params.has('uninstall-en')) {
+					openEmbedForm("https://docs.google.com/forms/d/e/1FAIpQLScLxb6dA7vaLU9J_yPWZR-Km4S_0jmq8m6zsLctEo52WfI_tw/viewform?embedded=true", 700, 640, 625, "")
+				} else if (params.has('report-bug-ru')) {
+					openEmbedForm("https://docs.google.com/forms/d/e/1FAIpQLSeTx9R7AV7VrrUsk-pc3dS03LEQRJDInEM_iw8NKK6AG2TqOA/viewform?embedded=true", 700, 640, 690, "/ru")
+				} else if (params.has('report-bug-en')) {
+					openEmbedForm("https://docs.google.com/forms/d/e/1FAIpQLSdFdjLD83PmQu_VSL0zNS9QS1gNQY2aJYHCp-ayFoIgBfaSgQ/viewform?embedded=true", 700, 640, 690, "")
+				} else if (params.has('request-feature-ru')) {
+					openEmbedForm("https://docs.google.com/forms/d/e/1FAIpQLSeVZo9WiIZg9phiIPnSh8iT7gsjOJ__0KoNq8kB8CUi04NXlQ/viewform?embedded=true", 700, 640, 690, "/ru")
+				} else if (params.has('request-feature-en')) {
+					openEmbedForm("https://docs.google.com/forms/d/e/1FAIpQLSevwyOra9OCNYelmaMh-rZURAxU7qu6WwRAF0fXFP9nJE0g2A/viewform?embedded=true", 700, 640, 690, "")
+				}
+			};
+			script.src = 'https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8';
+			d.getElementsByTagName('head')[0].appendChild(script);
+		}(document));
+	}
+
+</script>
+
+
+  </div>
+  <script src='/assets/js/scale.fix.js'></script>
+
+
+  
+</body>
+
+</html>
